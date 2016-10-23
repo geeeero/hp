@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Klausuranmeldung am Institut f&uuml;r Statistik</title>
+<!--    <link media="screen" href="../../css/global_screen.css" type="text/css" rel="stylesheet">
+    <link media="screen" href="../../css/site_screen.css" type="text/css" rel="stylesheet"> -->
+
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <meta http-equiv="content-language" content="de">
+
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+  <script>
+<!--
+function valid()
+{
+  if (document.formular.name.value=="") {
+    alert ("Bitte geben Sie Ihren Nachnamen ein!");     //Meldung wenn Fehler
+    document.formular.name.focus();                    //Sprung zum Feld
+    return false;
+  }
+
+  if (document.formular.vorname.value=="") {
+    alert ("Bitte geben Sie Ihren Vornamen ein!");
+    document.formular.vorname.focus();
+    return false;
+  }                                               //false gibt zurück wenn Fehler
+
+  if (document.formular.matrikelnummer.value=="") {
+    alert ("Bitte geben Sie Ihre Matrikelnummer ein!");
+    document.formular.matrikelnummer.focus();
+    return false;
+  }
+
+  if (isNaN(document.formular.matrikelnummer.value)) {
+    alert ("Die Matrikelnummer muss eine Zahl sein!");
+    document.formular.matrikelnummer.focus();
+    return false;
+  }
+
+  if (document.formular.matrikelnummer.value.length <7) {
+    alert("Die Matrikelnummer ist zu kurz!");
+    document.formular.matrikelnummer.focus();
+    return false;
+  }
+
+  if (document.formular.matrikelnummer.value.length >9) {
+    alert("Die Matrikelnummer ist zu lang!");
+    document.formular.matrikelnummer.focus();
+    return false;
+  }
+
+  if ((document.formular.email.value.indexOf('@')==-1) || (document.formular.email.value.indexOf('.')==-1) || (document.formular.email.value.length<5)) {
+    alert(unescape("Dies ist keine g%FCltige E-Mail-Adresse!"));
+    document.formular.email.focus();
+    return false;
+  }
+
+var pruefo = document.forms['formular'].pruefungsordnung;
+
+  if (pruefo[0].checked) {
+    alert(unescape("Keine Pr%FCfungsordnung angegeben!"));
+    return false;
+  }
+
+  if (pruefo[10].checked && document.formular.hauptfach.value=="") {
+    alert(unescape("Geben Sie Ihr Hauptfach an!"));
+    return false;
+  }
+  if (pruefo[13].checked && document.formular.anderePO.value=="") {
+    alert(unescape("Geben Sie an, unter welcher anderen Pr%FCfungsordnung Sie sich anmelden wollen!"));
+    return false;
+  }
+
+}
+
+function HauptfachAktivieren(obj1, objRadio){
+  document.getElementById(obj1).disabled = (objRadio.value !== "Statistik als NF von BA- und MA-Studiengaengen 2007");
+}
+
+function AndereAktivieren(obj1, objRadio){
+  document.getElementById(obj1).disabled = (objRadio.value !== "Andere");
+}
+
+
+//-->
+  </script>
+
+
+  </head>
+  <body>
+
+<h1>VORLESUNG XY SoSe 2011</h1>
+
+<h2>Online-Formular zur Klausuranmeldung</h2>
+
+<h2>Wichtige Hinweise:</h2>
+<ul>
+    <li>Diese Anmeldung dient ausschlie&szlig;lich organisatorischen Zwecken und entbindet <b>nicht</b> von der Anmeldepflicht
+        bei den entsprechenden Pr&uuml;fungs&auml;mtern, <i>sofern eine entsprechende Vorschrift besteht.</i><br>
+        (F&uuml;r die Studieng&auml;nge des Instituts f&uuml;r Statistik ist keine Anmeldung beim Pr&uuml;fungsamt erforderlich.)</li>
+    <li>F&uuml;llen Sie die Maske mit Sorgfalt aus und &uuml;berpr&uuml;fen Sie insbesondere Ihre Matrikelnummer.
+        Melden Sie sich bei Fehlern bitte erneut an; bei Anmeldungen mit der gleichen Matrikelnummer werden nur die Daten der letzten Anmeldung
+        f&uuml;r die Erstellung der Notenlisten verwendet.</li>
+    <li>[weitere Hinweise zur Klausur zur Vorlesung XY falls n&ouml;tig]</li>
+</ul>
+
+<form name="formular" method="post" action="http://www.statistik.lmu.de/sys/cgi/perl/klausuranmeldungen/skripts/klausuranmeldung_vorlesungXY-v4.pl" onsubmit="return valid()">
+ <table cellpadding=3 cellspacing=0 border=0 width="100%" style="padding-left:20pt;">
+<!--  <table width="60%" border="0" cellspacing="0" cellpadding="0" align="center"> -->
+      <tr>
+        <td class="normal" width="20%"><b><font size="2" face="Arial, Helvetica">Nachname:</font></b></td>
+        <td class="normal"><input type="text" name="name"></td>
+      </tr>
+
+
+      <tr>
+        <td class="normal" width="20%"><b><font size="2" face="Arial, Helvetica">Vorname:</font></b></td>
+        <td class="normal""><input type="text" name="vorname"></td>
+      </tr>
+
+
+      <tr>
+        <td class="normal" width="20%"><b><font size="2" face="Arial, Helvetica,">Matrikelnummer:</font></b></td>
+        <td class="normal"><input type="text" name="matrikelnummer" maxlength="12"></td>
+      </tr>
+
+
+      <tr>
+        <td class="normal" width="20%"><b><font size="2" face="Arial, Helvetica">Pr&uuml;fungsordnung, f&uuml;r die die Leistung erbracht wird:</font></b><br>(MA = Master, BA = Bachelor, NF = Nebenfach)</td>
+
+        <td class="normal">
+          <input type="radio" name="pruefungsordnung" onclick="HauptfachAktivieren('hauptfach', this); AndereAktivieren('anderePO', this);" value="keine" checked="checked" style="display:none;" />
+          <input type="radio" name="pruefungsordnung" onclick="HauptfachAktivieren('hauptfach', this); AndereAktivieren('anderePO', this);" value="Statistik MA 2007">Statistik MA 2007</br>
+          <input type="radio" name="pruefungsordnung" onclick="HauptfachAktivieren('hauptfach', this); AndereAktivieren('anderePO', this);" value="Statistik MA 2010">Statistik MA 2010</br>
+          <input type="radio" name="pruefungsordnung" onclick="HauptfachAktivieren('hauptfach', this); AndereAktivieren('anderePO', this);" value="Biostatistik MA 2007">Biostatistik MA 2007</br>
+          <input type="radio" name="pruefungsordnung" onclick="HauptfachAktivieren('hauptfach', this); AndereAktivieren('anderePO', this);" value="Biostatistik MA 2010">Biostatistik MA 2010</br>
+          <input type="radio" name="pruefungsordnung" onclick="HauptfachAktivieren('hauptfach', this); AndereAktivieren('anderePO', this);" value="Statistik WISO MA 2010">Statistik WISO MA 2010</br>
+          <input type="radio" name="pruefungsordnung" onclick="HauptfachAktivieren('hauptfach', this); AndereAktivieren('anderePO', this);" value="Statistik BA 2007">Statistik BA 2007</br>
+          <input type="radio" name="pruefungsordnung" onclick="HauptfachAktivieren('hauptfach', this); AndereAktivieren('anderePO', this);" value="Statistik BA 2010">Statistik BA 2010</br>
+          <input type="radio" name="pruefungsordnung" onclick="HauptfachAktivieren('hauptfach', this); AndereAktivieren('anderePO', this);" value="Statistik als NF von BA Soziologie 2008">Statistik als NF von BA Soziologie 2008</br>
+          <input type="radio" name="pruefungsordnung" onclick="HauptfachAktivieren('hauptfach', this); AndereAktivieren('anderePO', this);" value="Statistik als NF von BA Mathematik 2007">Statistik als NF von BA Mathematik 2007</br>
+          <input type="radio" name="pruefungsordnung" onclick="HauptfachAktivieren('hauptfach', this); AndereAktivieren('anderePO', this);" value="Statistik als NF von BA- und MA-Studiengaengen 2007">Statistik als NF von BA- und MA-Studieng&auml;ngen 2007, Hauptfach: <input type="text" name="hauptfach" id="hauptfach" disabled="true"></br>
+          <input type="radio" name="pruefungsordnung" onclick="HauptfachAktivieren('hauptfach', this); AndereAktivieren('anderePO', this);" value="Informatik plus Statistik BA 2010">Informatik plus Statistik BA 2010</br>
+          <input type="radio" name="pruefungsordnung" onclick="HauptfachAktivieren('hauptfach', this); AndereAktivieren('anderePO', this);" value="Statistik Diplom">Statistik Diplom</br>
+          <input type="radio" name="pruefungsordnung" onclick="HauptfachAktivieren('hauptfach', this); AndereAktivieren('anderePO', this);" value="Andere">Andere: <input type="text" name="anderePO" id="anderePO" disabled="true">
+        </td>
+      </tr>
+
+
+      <tr>
+        <td class="normal" width="20%"><b><font size="2" face="Arial, Helvetica">E-Mail:</font></b></td>
+        <td class="normal"><input type="text" name="email"></td>
+      </tr>
+
+
+      <tr>
+      <td class="normal">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="normal" width="20%">&nbsp;</td>
+        <td class="normal">
+          <input type="submit" value="Abschicken">
+          <input type="reset" name="Button2" value="Zur&uuml;cksetzen"></td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+
+
+    </body>
+  </html>

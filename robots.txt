@@ -1,0 +1,11 @@
+# Datei zum Robots-Exclusion-Standard
+# Darf angepasst oder geloescht werden.
+#
+# Mehr Info zum Robots-Exclusion-Standard:
+# http://www.robotstxt.org/
+
+# Alle Suchmaschinen duerfen alle Teile des
+# Webservers durchsuchen:
+
+User-agent: *
+Disallow:
