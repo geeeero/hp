@@ -1,0 +1,280 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Entscheidungstheorie SoSe 2010</title>
+    <link media="screen" href="../../css/global_screen.css" type="text/css" rel="stylesheet">
+    <link media="screen" href="../../css/site_screen.css" type="text/css" rel="stylesheet">
+    <link media="print" href="../../css/print.css" type="text/css" rel="stylesheet">
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <meta http-equiv="content-language" content="de">
+    <link rel="shortcut icon" href="../../graph/institutsbildheader.gif">
+    <script src="stopro/js/functions.js" type="text/javascript"></script>
+
+  <script>
+<!--
+
+function valid()
+{
+  if (document.formular.name.value=="") {
+    alert ("Bitte geben Sie Ihren Nachnamen ein");
+    document.formular.name.focus();
+    return false;
+  }
+  if (document.formular.vorname.value=="") {
+    alert ("Bitte geben Sie Ihren Vornamen ein");         //Meldung wenn Fehler
+    document.formular.vorname.focus();                            //Sprung zum Feld
+    return false;
+  }                                               //false gibt zur¸ck wenn Fehler
+  if (document.formular.matrikelnummer.value=="") {
+    alert ("Bitte geben Sie Ihre Matrikelnummer ein");
+    document.formular.matrikelnummer.focus();
+    return false;
+  }
+  if (isNaN(document.formular.matrikelnummer.value) == true) {
+    alert ("Die Matrikelnummer muﬂ eine Zahl sein!");
+    document.formular.matrikelnummer.focus();
+    return false;
+  }
+  if (document.formular.matrikelnummer.value.length <7) {
+    alert("Die Matrikelnummer ist zu kurz");
+    document.formular.matrikelnummer.focus();
+    return false;
+  }
+  if (document.formular.matrikelnummer.value.length >9) {
+    alert("Die Matrikelnummer ist zu lang");
+    document.formular.matrikelnummer.focus();
+    return false;
+  }
+  if ((isNaN(document.formular.geburtsdatumtag.value) == true) || (document.formular.geburtsdatumtag.value.length<2) ||
+((document.formular.geburtsdatumtag.value)<"01") || ((document.formular.geburtsdatumtag.value)>"31") ) {
+     alert ("Der Geburtstag muﬂ zwischen dem 01. und 31. liegen");
+     document.formular.geburtsdatumtag.focus();
+     return false;
+  }
+  if ((isNaN(document.formular.geburtsdatummonat.value) == true) || (document.formular.geburtsdatummonat.value.length<2) ||
+((document.formular.geburtsdatummonat.value)<"01") || ((document.formular.geburtsdatummonat.value)>"12") ) {
+     alert ("Der Geburtsmonat muﬂ zwischen dem 01. und 12. liegen");
+     document.formular.geburtsdatummonat.focus();
+     return false;
+  }
+  if ((isNaN(document.formular.geburtsdatumjahr.value) == true) || (document.formular.geburtsdatumjahr.value.length<2)) {
+     alert ("Das Geburtsjahr muﬂ zwischen 00 und 99 liegen");
+     document.formular.geburtsdatumjahr.focus();
+     return false;
+  }
+  if (document.formular.studienfach.value=="") {
+    alert ("Bitte geben Sie Ihr Studienfach ein. Hinweise hierzu finden Sie oben.");
+    document.formular.studienfach.focus();
+    return false;
+  }
+  if (document.formular.studienart.value=="") {
+    alert ("Bitte geben Sie Ihre Studienart ein. Hinweise hierzu finden Sie oben.");
+    document.formular.studienart.focus();
+    return false;
+  }
+  if (document.formular.studienordnung.value=="") {
+    alert ("Bitte geben Sie die f¸r Sie geltende Pr¸fungsordnung ein. Hinweise hierzu finden Sie oben.");
+    document.formular.studienordnung.focus();
+    return false;
+  }
+  if (document.formular.fachsemesterzahl.value=="") {
+    alert ("Bitte geben Sie Ihre Fachsemesterzahl ein");
+    document.formular.fachsemesterzahl.focus();
+    return false;
+  }
+  if ((isNaN(document.formular.fachsemesterzahl.value) == true) || (document.formular.fachsemesterzahl.value.length<2) ||
+((document.formular.fachsemesterzahl.value)<"01") || ((document.formular.fachsemesterzahl.value)>"20") ) {
+     alert ("Die Fachsemesterzahl muss zwischen 01 und 20 liegen");
+     document.formular.fachsemesterzahl.focus();
+     return false;
+  }
+  if ((document.formular.email.value.indexOf('@')==-1) || (document.formular.email.value.indexOf('.')==-1) ||
+(document.formular.email.value.length<5)) {
+    alert ("Dies ist keine g¸ltige E-Mail-Adresse");
+    document.formular.email.focus();
+    return false;
+  }
+}
+//-->
+  </script>
+  </head>
+  <body>
+    <!-- Kopfbereich mit Kopfbild -->
+    <a name="top"></a>
+    <div id="browserinfo" class="kein_druck">Diese Seite ist aus Gr&uuml;nden der Barrierefreiheit optimiert f&uuml;r aktuelle Browser. Sollten Sie einen &auml;lteren Browser verwenden, kann es zu Einschr&auml;nkungen der Darstellung und Benutzbarkeit der Website kommen!</div>
+
+    <div id="kopfbereich_folgeseite" class="kein_druck">
+    <img src="../../graph/agaugustin.jpg" alt="Kopfbild AG Method. Grundlagen der Statistik & ihre Anwendungen" style="width: 955px; height: 155px; border: none;" usemap="#Kopfbild"/>
+     <map name="Kopfbild">
+        <area shape="rect" coords="13,14,102,101"
+             href="http://www.lmu.de/" alt="LMU-Startseite" title="LMU-Startseite" target="_top">
+        <area shape="rect" coords="115,14,203,101"
+             href="http://www.lmu.de/" alt="LMU-Startseite" title="LMU-Startseite" target="_top">
+        <area shape="rect" coords="217,14,583,101"
+             href="http://www.stat.uni-muenchen.de/~thomas" alt="AG Method. Grundlagen der Statistik & ihre Anwendungen" title="AG Method. Grundlagen der Statistik & ihre Anwendungen" target="_top">
+     </map>
+    </div>
+
+    <div id="funktionsbereich" class="funktionsbereich kein_druck">
+      <!-- Search Google -->
+      <div id="suche">
+        <div class="suche">
+          <!-- Search Google -->
+          <FORM method=GET action="http://www.google.de/search" target="_top">
+            Suche:
+            <input name=q class="suchfeld">
+            <INPUT TYPE=hidden name=hl value=de>
+            <input type=hidden name=sitesearch value="http://www.stat.uni-muenchen.de">
+            <input type="image" src="../..//layout/schaltflaechen/go.gif" alt="suchen">
+          </FORM>
+        </div>
+      </div>
+      <div id="funktionen">
+        <div class="funktionen">
+          <a href="http://www.statistik.lmu.de/~walter/lehre/ET_10/index.html" target="_top">Entscheidungstheorie</a>&nbsp;&nbsp;|&nbsp;
+          <a href="http://www.statistik.lmu.de/~thomas" target="_top">AG Method. Grundlagen der Statistik & ihre Anwendungen</a>&nbsp;&nbsp;|&nbsp;
+          <a href="http://www.statistik.lmu.de/index.html" target="_top">Institut f&uuml;r Statistik</a>&nbsp;&nbsp;|&nbsp;
+          <a href="http://www.lmu.de" target="_top">LMU-Startseite</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hauptbereich mit Navigations-, Inhalts- und Servicebereich -->
+    <div id="hauptbereich">
+      <!-- Navigationsbereich -->
+      <div id="hauptnavigation">
+        <div class="hauptnavigation kein_druck">
+          <div class="navigationspunkt"><h1>ENTSCHEIDUNGSTHEORIE</h1>
+<!-- #GW Navigation ------------------------------------------------------- -->
+          <a href="index.html"><h2>Allgemeines / Aktuelles</h2></a>
+          <a href="material.html"><h2>Inhalt / Material</h2></a>
+          <a href="uebung.html"><h2>&Uuml;bung</h2></a>
+          <a href="klausur.html"><h2 class="navigation_aktiv">Klausur</h2></a>
+<!-- #GW Navigation Ende ------------------------------------------------------- -->
+          </div>
+        </div>
+      </div>
+      <!-- Ende Navigationsbereich -->
+      <!-- Logo fuer die Druckansicht -->
+      <div class="logo_druck no_web"><img src="../../layout/kopfbilder/print.gif" border="0" alt=""></img></div>
+
+      <!-- Inhaltsbereich -->
+      <div id="inhaltsbereich_ohneservice">
+        <!-- falls Sie eine Seite ohne Servicebereich erstellen wollen, hier bitte die Klasse "inhaltsbereich_ohneservice" verwenden! -->
+        <div class="inhaltsbereich_ohneservice">
+
+<!-- ---------------- ------------------------------------------------------- -->
+<!-- #GW Seiteninhalt ------------------------------------------------------- -->
+<!-- ---------------- ------------------------------------------------------- -->
+
+<h1>Entscheidungstheorie Sommersemester 2010</h1>
+
+<h2>Online-Formular zur Klausuranmeldung</h2>
+
+<h2>Wichtige Hinweise:</h2>
+<ul>
+    <li>Diese Anmeldung dient ausschlie&szlig;lich organisatorischen Zwecken und entbindet <b>nicht</b> von der Anmeldepflicht
+        bei den entsprechenden Pr&uuml;fungs&auml;mtern, sofern eine entsprechende Vorschrift besteht.
+        (F&uuml;r die Studieng&auml;nge am Institut f&uuml;r Statistik besteht keine solche Vorschrift.)</li>
+    <li>F&uuml;llen Sie die Maske mit Sorgfalt aus und melden Sie sich bitte nur <b>einmal</b> an. Schreiben Sie bei Fehlern bei der
+        Anmeldung bitte eine E-Mail an <a href="http://www.stat.uni-muenchen.de/~walter">Gero Walter</a>.</li>
+    <li>Bitte geben Sie im Feld <b>"Studienart"</b> an, welchen Abschluss Sie mit Ihrem gegenw&auml;rtigem Studium verfolgen,
+        d.h. Bachelor, Diplom, Magister etc...</li>
+</ul>
+
+<form name="formular" method="post" action="http://www.statistik.lmu.de/sys/cgi/perl/augustin/anmeldungET10.pl" onsubmit="return valid()">
+<table cellpadding=3 cellspacing=0 border=0 width="100%" style="padding-left:20pt;">
+<!--  <table width="60%" border="0" cellspacing="0" cellpadding="0" align="center"> -->
+      <tr>
+        <td class="normal" width="28%"><b><font size="2" face="Arial, Helvetica">Nachname:</font></b></td>
+        <td class="normal"><input type="text" name="name"></td>
+      </tr>
+      <tr>
+        <td class="normal" width="20%"><b><font size="2" face="Arial, Helvetica">Vorname:</font></b></td>
+        <td class="normal""><input type="text" name="vorname"></td>
+      </tr>
+      <tr>
+        <td class="normal" width="20%"><b><font size="2" face="Arial, Helvetica,">Matrikelnummer:</font></b></td>
+        <td class="normal"><input type="text" name="matrikelnummer" maxlength="12"></td>
+      </tr>
+      <tr>
+        <td class="normal" width="20%"><b><font size="2" face="Arial, Helvetica">Geburtsdatum (zweistellig):</font></b></td>
+        <td class="normal">
+        <table border="0" cellspacing="0" cellpadding="0" align="left">
+          <tbody>
+            <tr>
+              <td><input type="text" name="geburtsdatumtag" size="2" maxlength="2">.</td>
+              <td><input type="text" name="geburtsdatummonat" size="2" maxlength="2">.</td>
+              <td>19<input type="text" name="geburtsdatumjahr" size="2" maxlength="2"></td>
+            </tr>
+          </tbody>
+        </table>
+        </td>
+      </tr>
+      <tr>
+        <td class="normal" width="20%"><b><font size="2" face="Arial, Helvetica"> Studienfach:</font></b></td>
+        <td class="normal">    <input type="text" name="studienfach">
+      </tr>
+      <tr>
+        <td class="normal" width="20%"><b><font size="2" face="Arial, Helvetica"> Studienart:</font></b></td>
+        <td class="normal">    <input type="text" name="studienart">
+      </tr>
+      <tr>
+        <td class="normal" width="20%"><b><font size="2" face="Arial, Helvetica">E-Mail:</font></b></td>
+        <td class="normal"><input type="text" name="email"></td>
+      </tr>
+      <tr>
+      <td class="normal">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="normal" width="20%">&nbsp;</td>
+        <td class="normal">  <input type="submit" value="Abschicken"><input type="reset" name="Button2" value="Zur&uuml;cksetzen"></td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+
+
+<!-- --------------------- ------------------------------------------------------- -->
+<!-- #GW Seiteninhalt Ende ------------------------------------------------------- -->
+<!-- --------------------- ------------------------------------------------------- -->
+
+      <!-- Ende Inhaltsbereich -->
+            <div class="toplink kein_druck" align="right"><a href="#top">
+              <img src="../../layout/schaltflaechen/toplink.gif" alt="nach oben" border="0" height="12" width="10"></a>
+            </div>
+            <div class="titelleiste"></div>
+
+            <span style="font-size: 8pt;"> <font color="#a09f9f">
+                Letzte &Auml;nderung: Gero Walter,
+                <script language="JavaScript">
+   var dLM = new Date(Date.parse(document.lastModified));
+
+  var day = new Array("Sonntag","Montag","Dienstag",
+  "Mittwoch","Donnerstag","Freitag","Samstag");
+  var month = new Array("Januar","Februar","M&auml;rz","April","Mai","Juni",
+  "Juli","August","September","Oktober","November","Dezember");
+
+  var date = dLM.getDate();
+  var day = day[dLM.getDay()];
+  var year = dLM.getFullYear();
+  var month = month[dLM.getMonth()];
+  var hours = dLM.getHours();
+  var minutes = dLM.getMinutes();
+  var seconds = dLM.getSeconds();
+
+  if (date<10) date = "0"+date;
+  if (month<10) month = "0"+month;
+  if (hours<10) hours = "0"+hours;
+  if (minutes<10) minutes = "0"+minutes;
+  if (seconds<10) seconds = "0"+seconds;
+
+  document.write(date+". "+month+" "+year+", "+hours+":"+minutes+":"+seconds);
+            </script></font></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           </div>
+        </div>
+        <!-- Ende Inhaltsbereich -->
+      </div>
+      <!-- Ende Hauptbereich -->
+    </body>
+  </html>

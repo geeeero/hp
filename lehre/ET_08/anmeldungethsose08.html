@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Klausuranmeldung Entscheidungstheorie</title>
+  <script>
+<!--
+
+function valid()
+{
+  if (document.formular.name.value=="") {
+    alert ("Bitte geben Sie Ihren Nachnamen ein");
+    document.formular.name.focus();
+    return false;
+  }
+
+  if (document.formular.vorname.value=="") {
+    alert ("Bitte geben Sie Ihren Vornamen ein");         //Meldung wenn Fehler
+    document.formular.vorname.focus();                            //Sprung zum Feld
+    return false;
+  }                                               //false gibt zur¸ck wenn Fehler
+  if (document.formular.matrikelnummer.value=="") {
+    alert ("Bitte geben Sie Ihre Matrikelnummer ein");
+    document.formular.matrikelnummer.focus();
+    return false;
+  }
+
+  if (isNaN(document.formular.matrikelnummer.value) == true) {
+    alert ("Die Matrikelnummer muﬂ eine Zahl sein!");
+    document.formular.matrikelnummer.focus();
+    return false;
+  }
+
+  if (document.formular.matrikelnummer.value.length <7) {
+    alert("Die Matrikelnummer ist zu kurz");
+    document.formular.matrikelnummer.focus();
+    return false;
+  }
+
+  if (document.formular.matrikelnummer.value.length >9) {
+    alert("Die Matrikelnummer ist zu lang");
+    document.formular.matrikelnummer.focus();
+    return false;
+  }
+
+
+  if ((isNaN(document.formular.geburtsdatumtag.value) == true) || (document.formular.geburtsdatumtag.value.length<2) ||
+((document.formular.geburtsdatumtag.value)<"01") || ((document.formular.geburtsdatumtag.value)>"31") ) {
+     alert ("Der Geburtstag muﬂ zwischen dem 01. und 31. liegen");
+     document.formular.geburtsdatumtag.focus();
+     return false;
+  }
+
+  if ((isNaN(document.formular.geburtsdatummonat.value) == true) || (document.formular.geburtsdatummonat.value.length<2) ||
+((document.formular.geburtsdatummonat.value)<"01") || ((document.formular.geburtsdatummonat.value)>"12") ) {
+     alert ("Der Geburtsmonat muﬂ zwischen dem 01. und 12. liegen");
+     document.formular.geburtsdatummonat.focus();
+     return false;
+  }
+
+  if ((isNaN(document.formular.geburtsdatumjahr.value) == true) || (document.formular.geburtsdatumjahr.value.length<2)) {
+     alert ("Das Geburtsjahr muﬂ zwischen 00 und 99 liegen");
+     document.formular.geburtsdatumjahr.focus();
+     return false;
+  }
+
+  if (document.formular.studienfach.value=="") {
+    alert ("Bitte geben Sie Ihr Studienfach ein");
+    document.formular.studienfach.focus();
+    return false;
+  }
+
+  if (document.formular.studienart.value=="") {
+    alert ("Bitte geben Sie Ihre Studienart ein");
+    document.formular.studienart.focus();
+    return false;
+  }
+
+
+
+  if ((document.formular.email.value.indexOf('@')==-1) || (document.formular.email.value.indexOf('.')==-1) ||
+(document.formular.email.value.length<5)) {
+    alert ("Dies ist keine g¸ltige E-Mail-Adresse");
+    document.formular.email.focus();
+    return false;
+  }
+
+
+
+}
+
+//-->
+  </script>
+</head>
+<body>
+<h1>Anmeldung f&uuml;r die Klausur zur Vorlesung "Entscheidungstheorie" am 16.07.08</h1>
+Diese Anmeldung dient nur zur internen Koordination und ersetzt keine eventuell n&ouml;tige
+Anmeldung beim Pr&uuml;fungsamt.<br><br>
+<form name="formular" method="post" action="http://www.statistik.lmu.de/sys/cgi/perl/augustin/anmeldungethsose08.pl"
+ onsubmit="return valid()">
+  <table width="90%" border="0" cellspacing="0" cellpadding="0"
+ align="center">
+      <tr>
+        <td width="20%"><b><font size="2" face="Arial, Helvetica">Nachname:</font></b></td>
+        <td width="80%"><input type="text" name="name"></td>
+      </tr>
+      <tr>
+        <td width="20%"><b><font size="2" face="Arial, Helvetica">Vorname:</font></b></td>
+        <td width="80%"><input type="text" name="vorname"></td>
+      </tr>
+      <tr>
+        <td width="20%"><b><font size="2" face="Arial, Helvetica,">Matrikelnummer:</font></b></td>
+        <td width="80%"><input type="text" name="matrikelnummer" maxlength="12"></td>
+      </tr>
+      <tr>
+        <td width="20%"><b><font size="2" face="Arial, Helvetica">Geburtsdatum (zweistellig):</font></b></td>
+        <td width="80%">
+        <table border="0" cellspacing="0" cellpadding="0" align="left">
+          <tbody>
+            <tr>
+              <td><input type="text" name="geburtsdatumtag" size="2"
+ maxlength="2">.</td>
+              <td><input type="text" name="geburtsdatummonat" size="2"
+ maxlength="2">.</td>
+              <td>19<input type="text" name="geburtsdatumjahr" size="2"
+ maxlength="2"></td>
+            </tr>
+          </tbody>
+        </table>
+        </td>
+      </tr>
+      <tr>
+        <td width="20%"><b><font size="2" face="Arial, Helvetica"> Studienfach:</font></b></td>
+        <td width="80%">    <input type="text" name="studienfach">
+      </tr>
+      <tr>
+        <td width="20%"><b><font size="2" face="Arial, Helvetica"> Diplom/Bachelor/Master:</font></b></td>
+        <td width="80%">    <input type="text" name="studienart">
+      </tr>
+      <tr>
+        <td width="20%"><b><font size="2" face="Arial, Helvetica">E-Mail:</font></b></td>
+        <td width="80%"><input type="text" name="email"></td>
+      </tr>
+      <tr>
+      <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="20%">&nbsp;</td>
+        <td width="80%">  <input type="submit" value="Abschicken"><input type="reset" name="Button2" value="Zur&uuml;cksetzen"></td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+
+<br><br>
+Der Schein kann Ihnen zugeschickt werden, wenn Sie einen frankierten und adressierten
+Briefumschlag zur Klausur mitbringen.
+<br><br>
+Bei Anmeldeproblemen senden Sie uns bitte eine <a href="mailto:gero.walter@stat.uni-muenchen.de?subject=Entscheidungstheorie_Klausur">E-Mail</a>.
+</body>
+</html>
