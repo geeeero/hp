@@ -1,0 +1,48 @@
+/* Haupteinstellungen */
+HTML      { height:100%; }
+/*BODY      { height:100%; margin:0px; background-color:#404080; color:#c0c0c0; font-family:sans-serif; font-weight:normal; line-height:1.4em; padding-left:50px; padding-right:20px; padding-top:20px; padding-bottom:20px; }*/
+BODY      { height:100%; margin:0px; background-color:#404080; background-image: linear-gradient(90deg, #404080 75em, #404040 85em); color:#c0c0c0; font-family:sans-serif; font-weight:normal; line-height:1.4em; padding-left:14em; padding-right:1.5em; padding-top:1.5em; padding-bottom:1.5em; }
+BODY      { max-width:75em; }
+P         { margin-top: 0.6em; margin-bottom: 0.7em; }
+HR        { clear:both; }
+P, UL, .quote     { max-width: 65em; }
+/* #map, #map * { max-width: none !important; } */
+
+
+/* Ueberschriften */
+H1, H2, H3, H4 { margin-top:1.5em; margin-bottom:0.75em; clear:both; line-height:normal; clear:both; }
+H1        { color:#40a0b0; margin-top:1em; }
+H2        { background-color:#2080b0; color:#c0c0c0; font-weight:bold; font-size:110%; padding-left:0.5em; padding-right:0.5em; }	/* border:none, margin:0px fr Netscape-Kompatibilitï¿½, das schrottet aber die Definition von <BODY> - siehe http://www.oc3.no/workshop/css.html */
+H3        { border-bottom-style:solid; border-width:thin; }
+
+
+/* Links */
+A[href]   { text-decoration:none; }
+A[href]:link    { color:#20f0a0; }
+A[href]:visited { color:#00c000; }
+A[href]:hover, A[href]:active   { color:#ff0000; }
+A[href]:focus   { color:#20f0a0; text-decoration:underline; }
+A[href^="http"]:not([href*="geeeero.de"])::before	{ content: "\02192\00a0" }
+/* A[href^="http"]:not([href*="geeeero.de"])::before	{ content: "\0bb" } */
+
+
+/* Tabellen */
+TABLE     { border-spacing:0.3ex; }
+TD        { background-color:#c0c0c0; color:#404080; padding:1ex; }
+TH        { background-color:#e0e0e0; color:#404080; padding:1ex; }
+TD A[href]:link, TH A[href]:link { color:#009090; }
+TD A[href]:visited, TH A[href]:visited { color:#007000; }
+
+
+/* Navigation */
+@media screen, projection, tv, tty, handheld, speech {
+	#navblock   { position:fixed; left:0px; top:0px; height:100%; }
+	#navigation { height:100%; width:12.5em; border:none; float:left; }
+/*	#navblock:hover { z-index:1; }
+	#navigation { height:100%; width:30px; border:none; float:left; overflow-x:hidden; }
+	#navigation:hover  { width:10em; } */
+}
+@media print {
+	#navblock, #navigation   { display:none; }
+}
+
