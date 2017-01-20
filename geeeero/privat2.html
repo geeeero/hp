@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<title>&Uuml;bersicht</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Language" content="de" />
+	<meta name="author" content="Gero Walter" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes" />
+	<meta name="HandheldFriendly" content="true" /> 
+
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<link rel="stylesheet" type="text/css" href="gero.css" />
+
+  <link rel='icon' type='image/ico' href='favicon.ico' />
+</head>
+
+<body>
+  <div id="navblock">
+  <iframe id="navigation" src="frame_navigation2.html" seamless="seamless" scrolling="no"><a href="frame_navigation2.html">Navigation</a></iframe>
+  </div>
+  <div id="navline"><a href="http://geeeero.de/index.html" title="Home">Home</a> &gt; &Uuml;bersicht
+  </div>
+	<hr />
+  
+  <h1>Gero Walter</h1>
+
+  <p>Kleine Linksammlung und ein paar Bilder.</p>
+  <br>
+  <!--<p><img src="./graph/gw300.jpg" width="200" height="200"></p>
+  <br>-->
+  <p>Dank an <a href="http://christoph-moder.de">Christoph Moder</a> f&uuml;r die Webseiten-Vorlage.</p>
+
+  <script type="text/javascript" language="JavaScript">
+    var dLM = new Date(Date.parse(document.lastModified));
+    var date = dLM.getDate();
+    var year = dLM.getFullYear();
+    var month = dLM.getMonth() + 1;
+    var hours = dLM.getHours();
+    var minutes = dLM.getMinutes();
+    var seconds = dLM.getSeconds();
+    if (date<10) date = "0" + date;
+    if (month<10) month = "0" + month;
+    if (hours<10) hours = "0" + hours;
+    if (minutes<10) minutes = "0" + minutes;
+    if (seconds<10) seconds = "0" + seconds;
+		document.writeln( '	<hr />' );
+		document.writeln( '	<div align="right">Zuletzt aktualisiert: ' + year + '-' + month + '-' + date + ' ' + hours + ':' + minutes + ':' + seconds + '</div>' );
+	</script>
+</body>
+</html>
